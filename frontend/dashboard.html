@@ -2,22 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Recurly Dashboard</title>
-  <link rel="stylesheet" href="dashboard.css" />
-</head>
+  <title>Dashboard – Recurly</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Inter&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="dashboard.css">
+</head>
 <body>
-  <!-- LEFT SIDEBAR -->
+
   <aside class="sidebar">
-    <h1 class="logo">RECURY</h1>
+    <h1 class="brand">RECURY</h1>
 
     <p class="tagline">
-      Track, control, and stay on top of every recurring payment from one place.
+      Track, control, and stay on top<br>
+      of every recurring payment from<br>
+      one place.
     </p>
 
-    <button class="btn">Add Subscription</button>
-    <button class="btn">View History</button>
-    <button class="btn">Track Spending</button>
+    <a href="add-subscription.html" class="side-btn">Add Subscription</a>
+    <a href="history.html" class="side-btn">View History</a>
+    <a href="tracking.html" class="side-btn">Track Spending</a>
 
     <footer>
       <p>Manage. Track. Save.</p>
@@ -26,44 +30,48 @@
     </footer>
   </aside>
 
-  <!-- MAIN CONTENT -->
-  <main class="main">
-    <section class="header">
-      <h2>Hello Mehar,</h2>
-      <span>good to see you again</span>
-    </section>
+  <main class="content">
 
-    <section class="cards">
-      <img src="lp1.png" alt="Card Preview" />
-    </section>
+    <div class="top">
+      <img src="./assets/lp2.png" class="card-img" alt="Card preview">
+
+      <div class="welcome">
+        <h2>Hello Mehar,</h2>
+        <p>good to see you again</p>
+      </div>
+    </div>
 
     <h3 class="section-title">SUBSCRIPTION LIST</h3>
 
-    <div class="list">
-      <div class="item">
-        <span>NETFLIX</span>
-        <button>PAY NOW</button>
-        <span>₹499 / month</span>
-      </div>
-
-      <div class="item">
-        <span>SPOTIFY</span>
-        <button>PAY NOW</button>
-        <span>₹129 / month</span>
-      </div>
-
-      <div class="item">
-        <span>CULT</span>
-        <button>PAY NOW</button>
-        <span>₹12000 / year</span>
-      </div>
-
-      <div class="item">
-        <span>ZEE TV</span>
-        <button>PAY NOW</button>
-        <span>₹799 / month</span>
-      </div>
+    <div class="subscription">
+      <span>NETFLIX</span>
+      <span>499/month</span>
+      <a href="confirm-payment.html" class="pay">PAY NOW</a>
+      <span class="delete">delete subscription</span>
     </div>
+
+    <div class="subscription">
+      <span>SPOTIFY</span>
+      <span>129/month</span>
+      <a href="confirm-payment.html" class="pay">PAY NOW</a>
+      <span class="delete">delete subscription</span>
+    </div>
+
+    <div class="subscription">
+      <span>CULT</span>
+      <span>12000/year</span>
+      <a href="confirm-payment.html" class="pay">PAY NOW</a>
+      <span class="delete">delete subscription</span>
+    </div>
+
+    <div class="subscription">
+      <span>ZEE TV</span>
+      <span>799/month</span>
+      <a href="confirm-payment.html" class="pay">PAY NOW</a>
+      <span class="delete">delete subscription</span>
+    </div>
+
   </main>
+
 </body>
 </html>

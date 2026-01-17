@@ -3,67 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <title>Recurly</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Unna&family=Libre+Caslon+Display&family=Anonymous+Pro&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <h1>RECURY</h1>
+    <div class="hero-text">
+      <h1 class="logo">RECURY</h1>
 
-    <h2>All your subscriptions in one place</h2>
+      <h2>All your subscriptions in one place</h2>
 
-    <p>
-      Track recurring payments, monitor your spending,
-      and never miss a renewal.
-    </p>
+      <p class="hero-desc">
+        Track recurring payments, monitor your spending,
+        and never miss a renewal.
+      </p>
 
-    <a href="dashboard.html">
-      <button>VIEW DASHBOARD</button>
-    </a>
+      <a href="dashboard.html" class="btn">
+        VIEW DASHBOARD
+      </a>
+    </div>
 
-    <img src="assets/lp1.png" alt="Subscription card" />
+    <div class="hero-image">
+      <img src="assets/lp1.png" alt="Subscription card" />
+    </div>
   </section>
 
   <!-- SECTION 2 -->
-  <section>
-    <img src="assets/lp2.png" alt="Subscription overview card" />
+  <section class="section split">
+    <div class="image">
+      <img src="assets/lp2.png" alt="Subscription overview card" />
+    </div>
 
-    <h2>
-      Subscriptions are easy to start.<br />
-      Hard to keep track of.
-    </h2>
+    <div class="text">
+      <h2>
+        Subscriptions are easy to start.<br />
+        Hard to keep track of.
+      </h2>
 
-    <p>
-      Most people are paying for more than they realize.
-    </p>
+      <p class="muted">
+        Most people are paying for more than they realize.
+      </p>
 
-    <p>
-      Recurring charges stack up silently, month after month often without notice.
-      Missed renewals, forgotten trials, and overlapping services make spending
-      harder to control.
-    </p>
+      <p>
+        Recurring charges stack up silently, month after month often without notice.
+        Missed renewals, forgotten trials, and overlapping services make spending
+        harder to control.
+      </p>
 
-    <p>
-      Visibility is the first step to taking your money back.
-    </p>
+      <p>
+        Visibility is the first step to taking your money back.
+      </p>
+    </div>
   </section>
 
   <!-- SECTION 3 -->
-  <section>
-    <img src="assets/lp3.png" alt="Dashboard card" />
+  <section class="section split reverse">
+    <div class="text">
+      <h2>Recurly fixes that.</h2>
 
-    <h2>Recurly fixes that.</h2>
+      <p>
+        One dashboard for every subscription.
+        Know what you pay, when it renews,
+        and where your money goes.
+      </p>
 
-    <p>
-      One dashboard for every subscription.
-      Know what you pay, when it renews,
-      and where your money goes.
-    </p>
+      <a href="dashboard.html" class="btn">
+        VIEW DASHBOARD
+      </a>
+    </div>
 
-    <a href="dashboard.html">
-      <button>VIEW DASHBOARD</button>
-    </a>
+    <div class="image">
+      <img src="assets/lp3.png" alt="Dashboard card" />
+    </div>
   </section>
 
 </body>

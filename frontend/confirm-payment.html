@@ -6,136 +6,52 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Unna&family=Libre+Caslon+Display&family=Anonymous+Pro&display=swap" rel="stylesheet">
-
-  <style>
-    /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      min-height: 100vh;
-      background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: "Inter", sans-serif;
-      color: #fff;
-    }
-
-    .logo {
-      position: absolute;
-      top: 40px;
-      left: 60px;
-      font-family: "Libre Caslon Display", serif;
-      letter-spacing: 2px;
-      font-size: 22px;
-    }
-
-    .card {
-      width: 420px;
-      padding: 44px 38px;
-      border-radius: 20px;
-      background: linear-gradient(180deg, #141414 0%, #2F2F2F 100%);
-      text-align: center;
-    }
-
-    h1 {
-      font-family: "Unna", serif;
-      font-size: 26px;
-      margin-bottom: 14px;
-      letter-spacing: 1px;
-    }
-
-    .desc {
-      font-size: 13px;
-      opacity: 0.7;
-      line-height: 1.6;
-      margin-bottom: 32px;
-    }
-
-    .details {
-      margin-bottom: 36px;
-    }
-
-    .details h3 {
-      font-family: "Unna", serif;
-      font-size: 18px;
-      margin-bottom: 14px;
-    }
-
-    .row {
-      display: flex;
-      justify-content: space-between;
-      margin: 12px 0;
-      font-size: 14px;
-      opacity: 0.9;
-    }
-
-    .value {
-      opacity: 1;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 36px;
-      border-radius: 12px;
-      background: linear-gradient(180deg, #C9A66B 0%, #9E7C3E 100%);
-      color: #000;
-      font-family: "Anonymous Pro", monospace;
-      font-size: 14px;
-      letter-spacing: 1px;
-      text-decoration: none;
-    }
-
-    .footer-text {
-      margin-top: 36px;
-      font-size: 11px;
-      opacity: 0.4;
-      line-height: 1.6;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="logo">RECURY</div>
-
+<div class="center-page">
   <div class="card">
-    <h1>PAY SUBSCRIPTION</h1>
 
-    <p class="desc">
-      You’re about to make a payment for the following subscription.<br />
-      Please review the details carefully before proceeding.
-    </p>
+    <h1 class="logo">RECURY</h1>
 
-    <div class="details">
-      <h3>Subscription</h3>
-      <p style="margin-bottom: 18px;">Netflix</p>
+    <h2>Confirm Payment</h2>
+    <p class="muted">Review the details before confirming payment</p>
 
-      <div class="row">
-        <span>Billing cycle</span>
-        <span class="value">Monthly</span>
-      </div>
+    <p><strong>Subscription:</strong> Netflix</p>
+    <p><strong>Amount:</strong> ₹499</p>
 
-      <div class="row">
-        <span>Amount to be paid</span>
-        <span class="value">₹499</span>
-      </div>
-    </div>
-
-    <!-- CONFIRM → SUCCESS -->
-    <a href="success.html" class="btn">
+    <button class="btn full-btn" onclick="confirmPayment()">
       CONFIRM PAYMENT
-    </a>
-  </div>
+    </button>
 
-  <p class="footer-text">
-    By continuing, you agree to our terms and subscription policy.<br />
-    This payment is secure and encrypted.<br />
-    You can manage or cancel this subscription anytime from your dashboard.
-  </p>
+    <a href="dashboard.html" class="btn link-btn">CANCEL</a>
+
+  </div>
+</div>
+
+<script>
+  function confirmPayment() {
+    const payment = {
+      subscriptionName: "Netflix",
+      amount: 499
+    };
+
+    fetch("http://localhost:8080/payments", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payment)
+    })
+    .then(() => {
+      window.location.href = "success.html";
+    })
+    .catch(err => {
+      console.error("Error confirming payment", err);
+    });
+  }
+</script>
 
 </body>
 </html>
